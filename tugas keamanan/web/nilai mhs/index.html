@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-wid
+    th, initial-scale=1.0">
+    <title>Keamanan perangkat lunak.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="" class="tbl-biru">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <!-- untuk home -->
+        <section id="home">
+            <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg&ga=GA1.2.1769275626.1605867161"/>
+            <div class="kolom">
+                <p class="deskripsi">Menghitung Nilai ges</p>
+                <h2>Tetap Belajar</h2>
+                
+                    <form name="form" action="javascript:void(0);">
+    <table>
+        <tr>
+            <td>Nilai Tugas (20%)</td>
+            <td><input type="text" name="ntgs"></td>
+        </tr>
+        <tr>
+            <td>Nilai UTS (35%)</td>
+            <td><input type="text" name="nuts"></td>
+        </tr>
+        <tr>
+            <td>Nilai UAS (45%)</td>
+            <td><input type="text" name="nuas"></td>
+        </tr>
+        <tr>
+            <td>Nilai Akhir</td>
+            <td><input type="text" name="nakhir" disabled></td>
+        </tr>
+        <tr>
+            <td>Nilai Huruf</td>
+            <td><input type="text" name="nhuruf" disabled></td>
+        </tr>
+        <tr>
+            <td>Predikat</td>
+            <td><input type="text" name="predikat" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="hasil" value="hitung" onclick="nilaiakhir()"></td>
+            <td><input type="reset" name="reset"></td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript">
+
+/** kode fungsi nilai akhir */
+function nilaiakhir(){
+    var ntgs = parseInt(document.form.ntgs.value);
+    var nuts = parseInt(document.form.nuts.value);
+    var nuas = parseInt(document.form.nuas.value);
+    var nhuruf = "";
+    var nakhir = (parseInt(ntgs)*20/100) + (parseInt(nuts)*35/100) + (parseInt(nuas)*45/100);
+    document.form.nakhir.value = nakhir;
+
+    if( nakhir > 80){
+        nhuruf = "A";
+    }
+    else if( nakhir > 70 ){
+        nhuruf = "B";
+    }
+    else if( nakhir > 60 ){
+        nhuruf = "C";
+    }
+    else if( nakhir > 40 ){
+        nhuruf = "D";
+    } else {
+        nhuruf = "E";       
+    }
+
+    document.form.nhuruf.value = nhuruf;
+}
+
+
+</script>
+
+  
+           
+
+        </section>
+
+            </div>
+        </section>
+    </div>
+
+    <div id="contact">
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer-section">
+                    <h3>Mahasiswa.</h3>
+                    <p>Unesa Jaya</p>
+                </div>
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Ciluk baa</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Jln.Raya Bogor</p>
+                    <p>Kode Pos: 61257</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Social</h3>
+                    <p><b>Wa : DM aja</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
